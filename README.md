@@ -1,2 +1,3 @@
-# code-jam-2016-qualif
-Google Code Jam 2016 Qualification Round
+# Google Code Jam 2016 Qualification Round
+
+My solutions for the Google Code Jam 2016 Qualification Round.
