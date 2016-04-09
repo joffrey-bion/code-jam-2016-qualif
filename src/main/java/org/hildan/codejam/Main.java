@@ -12,11 +12,11 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 import org.hildan.codejam.io.CodeJamRunner;
-import org.hildan.codejam.problems.countingsheep.CountingSheep;
+import org.hildan.codejam.problems.fractiles.Fractiles;
 
 public class Main {
 
-    private static final CodeJamRunner runner = new CountingSheep();
+    private static final CodeJamRunner runner = new Fractiles();
 
     public static void main(String[] args) {
         if (args.length == 0) {
