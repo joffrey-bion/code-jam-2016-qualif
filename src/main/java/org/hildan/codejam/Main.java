@@ -12,11 +12,11 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 import org.hildan.codejam.io.CodeJamRunner;
-import org.hildan.codejam.problems.fractiles.Fractiles;
+import org.hildan.codejam.problems.coinjam.CoinJam;
 
 public class Main {
 
-    private static final CodeJamRunner runner = new Fractiles();
+    private static final CodeJamRunner runner = new CoinJam();
 
     public static void main(String[] args) {
         if (args.length == 0) {
