@@ -3,20 +3,20 @@ package org.hildan.codejam.problems.fractiles;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class FractilesVisual {
 
     public static void main(String[] args) {
-        int K = 3;
-        int C = 2;
+        int K = 8;
+        int C = 3;
         for (String seq : generateSequencesWithOneGold(K)) {
             System.out.println(iterate(seq, C));
         }
     }
 
     private static String generateLead(int K) {
-        return IntStream.range(0, K).mapToObj(i -> "L").collect(Collectors.joining());
+        return Stream.generate(() -> "L").limit(K).collect(Collectors.joining());
     }
 
     private static List<String> generateSequencesWithOneGold(int K) {
