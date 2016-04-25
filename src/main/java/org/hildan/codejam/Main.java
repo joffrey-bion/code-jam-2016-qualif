@@ -9,7 +9,6 @@ import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 
 import org.hildan.codejam.io.CodeJamRunner;
 import org.hildan.codejam.problems.coinjam.CoinJam;
@@ -24,12 +23,21 @@ public class Main {
             runner.run(System.in, System.out);
             return;
         }
-        int outFlagIndex = Arrays.binarySearch(args, "-o");
+        int outFlagIndex = findOutputFlag(args);
         if (outFlagIndex > -1) {
             runAndPrintToFile(args, outFlagIndex);
         } else {
             runAndPrintToStdOut(args);
         }
+    }
+
+    private static int findOutputFlag(String[] args) {
+        for (int i = 0; i < args.length; i++) {
+            if ("-o".equals(args[i])) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     private static void runAndPrintToFile(String[] args, int outputFlagIndex) {
