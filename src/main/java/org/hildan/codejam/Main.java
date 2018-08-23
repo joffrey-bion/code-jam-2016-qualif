@@ -11,11 +11,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.hildan.codejam.io.CodeJamRunner;
-import org.hildan.codejam.problems.coinjam.CoinJam;
+import org.hildan.codejam.problems.fashionpolice.FashionPolice;
 
 public class Main {
 
-    private static final CodeJamRunner runner = new CoinJam();
+    private static final CodeJamRunner runner = new FashionPolice();
 
     public static void main(String[] args) {
         if (args.length == 0) {
